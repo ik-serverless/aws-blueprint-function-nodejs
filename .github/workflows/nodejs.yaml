@@ -35,7 +35,7 @@ jobs:
     - name: define version
       id: version
       run: |
-        echo "::set-output name=release_timestamp::$(date +%Y%d%m_%H.%m)"
+        echo "::set-output name=release_timestamp::$(date +%Y-%m-%d_%H.%m)"
         echo "::set-output name=tag_hash::${GITHUB_SHA::8}"
         echo "::set-output name=changelog::$(git log -1 --pretty=format:"%s")"
     - name: build artifact
