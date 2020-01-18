@@ -9,7 +9,7 @@ Log.debug('lambda executing...');
 
 export const handler: Handler = middy(
   async (event: any): Promise<any> => {
-    Log.info(`Event: ${event}.`);
+    Log.info(`Event: ${JSON.stringify(event)}.`);
     let hw: string = 'Hello Dummy Function';
     Log.info(`${hw}. Environment: ${NODE_ENV}`);
     Log.info(
