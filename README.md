@@ -3,6 +3,7 @@
 [![](https://img.shields.io/github/license/ik-serverless/aws-blueprint-function-nodejs)](https://github.com/ik-serverless/aws-blueprint-function-nodejs)
 ![](https://github.com/ik-serverless/aws-blueprint-function-nodejs/workflows/NodeJS/badge.svg)
 ![](https://github.com/ik-serverless/aws-blueprint-function-nodejs/workflows/Validate/badge.svg)
+![](https://img.shields.io/github/v/release/ik-serverless/aws-blueprint-function-nodejs?color=blue&include_prereleases)
 ![](https://img.shields.io/github/v/tag/ik-serverless/aws-blueprint-function-nodejs)
 [![](https://img.shields.io/github/languages/code-size/ik-serverless/aws-blueprint-function-nodejs)](https://github.com/ik-serverless/aws-blueprint-function-nodejs)
 [![](https://img.shields.io/github/repo-size/ik-serverless/aws-blueprint-function-nodejs)](https://github.com/ik-serverless/aws-blueprint-function-nodejs)

@@ -3,7 +3,7 @@ import { Handler } from 'aws-lambda';
 import middy from 'middy';
 import moment from 'moment';
 
-import { LambdaResponse } from './utils';
+import { LambdaResponse } from './models';
 
 Log.debug('lambda executing...');
 
