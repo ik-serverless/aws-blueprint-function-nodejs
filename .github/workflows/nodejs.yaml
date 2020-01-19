@@ -24,12 +24,17 @@ jobs:
     - run: npm run build --if-present
     - run: npm run local
       env:
-        DEBUG: INFO
+        LOG_LEVEL: WARN
         NODE_ENV: production
         REGION: eu-west-1
     - run: npm run local
       env:
-        DEBUG: DEBUG
+        LOG_LEVEL: DEBUG
+        NODE_ENV: production
+        REGION: us-west-1
+    - run: npm test
+      env:
+        LOG_LEVEL: ERROR
         NODE_ENV: production
         REGION: us-west-1
     - name: define version

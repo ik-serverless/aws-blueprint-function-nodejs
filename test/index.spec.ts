@@ -1,25 +1,17 @@
-import * as sinon from 'sinon';
-import { handler } from '../src';
+// @ts-nocheck
+import { lambdahandler } from '../src';
 import { expect } from 'chai';
+import * as event from './fixtures/sns.event.json';
 
-describe('index', () => {
-  /**
-   * Prepare a sandbox to run the tests in.
-   */
-  beforeEach(() => {
-    this.sandbox = sinon.sandbox.create();
-  });
+describe('index: ...', () => {
+  beforeEach(() => {});
 
-  /**
-   * Remove the sandbox
-   */
-  afterEach(() => {
-    this.sandbox.restore();
-    // AWS.restore();
-  });
+  afterEach(() => {});
 
-  it('index: Test the available exports', () => {
-    let test = handler({});
-    expect(test.hasRecords()).to.be.equal(false);
+  it('index: should retrieve records', async () => {
+    let expected = 1;
+    let result = await lambdahandler(event);
+    let body = JSON.parse(result['body']);
+    expect(body.records).to.be.equal(expected);
   });
 });

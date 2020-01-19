@@ -1,8 +1,8 @@
-interface Response {
+interface LambdaResponse {
   statusCode: number;
   body: string;
 }
 
 export {
-  Response
+  LambdaResponse,
 };

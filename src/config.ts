@@ -1,8 +1,7 @@
 import * as env from 'env-var';
 
 const NODE_ENV: string = env
-  .get('NODE_ENV')
-  .required()
+  .get('NODE_ENV', 'development')
   .asString();
 
 const REGION: string = env
@@ -10,9 +9,9 @@ const REGION: string = env
   .required()
   .asString();
 
-const DEBUG: string = env
-  .get('DEBUG')
+const LOG_LEVEL: string = env
+  .get('LOG_LEVEL')
   .required()
   .asString();
 
-export { NODE_ENV, REGION, DEBUG };
+export { NODE_ENV, REGION, LOG_LEVEL };

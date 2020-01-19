@@ -6,15 +6,15 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint --project tsconfig.json",
+    "lint": "tslint --project tsconfig.build.json",
     "pretest": "npm run lint",
     "all": "npm run build && npm prune --production && rm -f dist/lambda.zip && zip -q -r dist/lambda.zip node_modules dist && npm ci",
-    "testt": "mocha -r ts-node/register test/**/*.spec.ts",
+    "test": "mocha --colors -r ts-node/register test/**/*.spec.ts",
     "start": "tsc && node dist/index.js",
     "local": "tsc -p tsconfig.build.json && npm run 001",
     "dev:install": "npm install --only=dev && npm install",
     "prod:install": "npm install --production",
-    "001": "./node_modules/.bin/lambda-local -f dist/index -e '{\"json\":\"here\"}'"
+    "001": "./node_modules/.bin/lambda-local -f dist/index -e test/fixtures/sns.event.json"
   },
   "keywords": [
     "aws",
