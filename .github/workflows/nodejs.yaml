@@ -74,8 +74,8 @@ jobs:
         prerelease: true
         body: |
           Changes in this Release
-          -${{ steps.define-version.outputs.changelog }}
-          -NodeJS Version: ${{ matrix.node-version }}
+          - ${{ steps.define-version.outputs.changelog }}
+          - NodeJS Version: ${{ matrix.node-version }}
     - name: Upload Release Asset
       id: upload-release-asset
       uses: actions/upload-release-asset@v1.0.1

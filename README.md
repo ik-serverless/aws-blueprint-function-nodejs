@@ -1,4 +1,4 @@
-# Serverless Blueprint
+# AWS Serverless NodeJS Blueprint
 
 [![](https://img.shields.io/github/license/ik-serverless/aws-blueprint-function-nodejs)](https://github.com/ik-serverless/aws-blueprint-function-nodejs)
 ![](https://github.com/ik-serverless/aws-blueprint-function-nodejs/workflows/NodeJS/badge.svg)
@@ -13,11 +13,11 @@
 
 <!-- START makefile-doc -->
 ```
-$ make help 
+$ make help
 hooks                          Commit hooks setup
 validate                       Validate with pre-commit hooks
 changelog                      Update changelog
-release                        Create release version 
+release                        Create release version
 ```
 <!-- END makefile-doc -->
 
